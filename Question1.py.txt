@@ -1,0 +1,11 @@
+#Question1
+import re
+def isvalid(num):
+    pattern = re.compile(r"^\+?\d{0,3}\s?-?\.?\(?\d{3}\)?\s?-?\.?\d{3}\s?-?\.?\d{4}?")
+    return pattern.match(num)
+    
+num = input('Enter the number:')
+if isvalid(num):
+    print("Valid Number")
+else:
+    print("Invalid Number")
